@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
+{% block photo %}
+<div style="margin-left:50%; width: 50%; height: 100%">
+    <img src="../images/myself.jpeg" style="float: right; padding-right: 10%; width: 40%; height: auto">
+</div>
+
+{% endblock %}
+
 {% block heading %}
 <h5>Current 1B Software Engineering Student in University of Waterloo</h5>
 {% endblock %}
@@ -14,12 +21,38 @@
            <li>
                 <a href="https://www.linkedin.com/in/yiu-him-chung/">LinkedIn</a>
            </li>
+           <li>
+                <a href="mailto: cyiuhim@gmail.com">Email</a>
+           </li>
         </ul>
     </div>
 </div>
 <div>
-    <p>Skills: </p>
-    <div></div>
+    <p>Skills and experience: </p>
+    <ul>
+        <li>
+            C++: four years in 
+            <a href="projects/robotics">VEX robotics</a>
+            , main programmer on the team, helping with designing of robot movement algorithms, such as PID and position tracking. 
+        </li>
+        <li>
+            Python: 6 months in projects involving AI, such as in 
+            <a href="projects/showerscribe">ShowerScribe</a>
+            , helped with backend database development and use of AI models.
+        </li>
+        <li>
+            Version Control Systems: Use of Git to collaborate with others during hackathons and projects 
+        </li>
+        <li>
+            Time and Project Management: proficiency in using tools such as Trello and Google Calendar to keep track of tasks and deadlines in teamwork environment 
+        </li>
+        <li>
+            Problem Solving Skills: Champion in national math competitions, proficiency in solving problems using multiple approaches and comparing design solutions
+        </li>
+    </ul>
+</div>
+<div>
+
 </div>
 
 {% endblock %}
