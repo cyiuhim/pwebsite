@@ -15,11 +15,11 @@ def about():
 def projects(): 
     return render_template("project.html")
 
-@app.route('/projects/robotics')
+@app.route('/robotics')
 def robotics():
     return render_template("robot.html")
 
-@app.route('/projects/showerscribe')
+@app.route('/showerscribe')
 def showerscribe():
     return render_template("showerscribe.html")
 
