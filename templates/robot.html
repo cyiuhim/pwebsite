@@ -1,80 +1,81 @@
 {% extends 'base.html' %}
 
-{% block heading %}
-<h5>My VEX Robotics Experience</h5>
-{% endblock %}
-
-{% block content %}
-
-<div>
+{% block main %}
+<body>
     <div>
-        Link to Github Repository of my code:
-        <a href="https://github.com/pumpkin285/Robotics-Code">Robotics</a>
+        <h1>Vincent Chung </h1>
     </div>
+    <h5>My VEX Robotics Experience</h5>
     <div>
-        <p>
-        Being in VEX Robotics for the entirety of my time in high school, I have developed a variety of skills 
-        regarding teamwork and programming, as well as achieved a high level of competitiveness.
-        </p>
+        <div>
+            Link to Github Repository of my code:
+            <a href="https://github.com/pumpkin285/Robotics-Code">Robotics</a>
+        </div>
+        <div>
+            <p>
+            Being in VEX Robotics for the entirety of my time in high school, I have developed a variety of skills 
+            regarding teamwork and programming, as well as achieved a high level of competitiveness.
+            </p>
+            
+            <ul>
+                Some achievements include:   
+                <li>World Qualifications in my junior and senior years (Tipping point and Spin Up)</li>
+                <li>Provincial Finalist in my senior year</li>
+                <li>Multiple awards including the Amaze and Judges Awards </li>
+                <li>Peaked at Top 50 in the world for skills</li>
+            </ul>
+        </div>
+        <div>
+            <p>Throughout the development of my code, I have mainly improved on the autonomous code of the robot. </p>
+            <ul>
+                Some algorithms and techniques that I have used include: 
+                <li>PID (Proportional-Integral-Derivative) Controller</li>
+                It is an error feedback mechanism, that takes in the errors between predicted movement and actual movement
+                and adjust the motor powers based on calculations and PID constant tuning. 
+                This allowed accurate movements of the robot in each autonomous run. 
+                Through this implementation, I have learnt rigorous testing of the robot and its movements. 
+                This allows me to develop a skill to pay attention to the details of my code to ensure that the robot moves 
+                accordingly and accurately every autonomous run. <br>
+                In addition to the readily available code on the internet, I have several additions to the code: <br>
+                <img src="../images/pid.png" alt="pid code" style="width: 35rem;height: auto;"><br>
+                This code is taken from my turn PID function, with the forward/backward PID function working similarly.
+                <ol>
+                    Some additions included:
+                    <li>Gradual acceleration</li>
+                    This ensures that the robot does not drift or tip when I start the PID movement. 
+                    This is regulated using the "maxaccel" variable. 
+                    <li>Voltage Control</li>
+                    Instead of using rpm control, I used voltage to ensure that the motors do not overheat
+                    while ensuring the accuracy of power control of the motors. 
+                </ol>
+                <li>Position Tracking Algorithm</li>
+                By using two prependicularly placed unpowered tracking wheels on the robot, as well as an inertial sensor 
+                that acts as a gyro for heading detection, I am able to use calculus and trigonometry to determine the 
+                approximate position of the robot on the playing field. This allows coordinate-based coding of the robot, 
+                which I can then use coordinates of the objects on the playing field to code the robot. Even if the robot
+                is a couple of inches off its expected position due to environmental factors, it can still correct itself
+                during the autonomous run. <br>
+                I have taken some reference from this document: 
+                <a href="http://thepilons.ca/wp-content/uploads/2018/10/Tracking.pdf">5225A Odometry</a><br>
+                and alongside some of my math: <br>
+                <img src="../images/odom1.jpg" alt="odom-1" style="width: 25rem; height: auto;">
+                <img src="../images/odom2.jpg" alt="odom-2" style="width: 25rem; height: auto;">
+                <li>Pure Pursuit</li>
+                For this algorithm, I mainly  
+                <a href="https://www.chiefdelphi.com/uploads/default/original/3X/b/e/be0e06de00e07db66f97686505c3f4dde2e332dc.pdf">referenced</a>
+                 it from team 1712 from FRC. It is an algorithm that allows the robot to follow a pre-generated curve on the playing field. 
+                It mainly plots some lookahead points on the path for the robot to follow, and the more points are plotted, the 
+                better the robot follows the path. Through some online searching and researching, I implemented a quadratic and cubic 
+                <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve">Bézier curve</a>
+                for the path generation. This allows me to dodge obstacles on the straight line between two points that I want to direct the robot to drive to.
+                The main method of achieving this is to carefully adjust the difference between left and right chassis drive power to achieve the 
+                curvature of the robot movement desired.  
+                Code for path following algorithm is as follows: <br>
+                <img src="../images/pure-pursuit-1.png" alt="pure-pursuit-1" style="width: 35rem; height: auto;">
+            </ul>
+        </div>
         
-        <ul>
-            Some achievements include:   
-            <li>World Qualifications in my junior and senior years (Tipping point and Spin Up)</li>
-            <li>Provincial Finalist in my senior year</li>
-            <li>Multiple awards including the Amaze and Judges Awards </li>
-            <li>Peaked at Top 50 in the world for skills</li>
-        </ul>
-    </div>
-    <div>
-        <p>Throughout the development of my code, I have mainly improved on the autonomous code of the robot. </p>
-        <ul>
-            Some algorithms and techniques that I have used include: 
-            <li>PID (Proportional-Integral-Derivative) Controller</li>
-            It is an error feedback mechanism, that takes in the errors between predicted movement and actual movement
-            and adjust the motor powers based on calculations and PID constant tuning. 
-            This allowed accurate movements of the robot in each autonomous run. 
-            Through this implementation, I have learnt rigorous testing of the robot and its movements. 
-            This allows me to develop a skill to pay attention to the details of my code to ensure that the robot moves 
-            accordingly and accurately every autonomous run. <br>
-            In addition to the readily available code on the internet, I have several additions to the code: <br>
-            <img src="../images/pid.png" alt="pid code" style="width: 35rem;height: auto;"><br>
-            This code is taken from my turn PID function, with the forward/backward PID function working similarly.
-            <ol>
-                Some additions included:
-                <li>Gradual acceleration</li>
-                This ensures that the robot does not drift or tip when I start the PID movement. 
-                This is regulated using the "maxaccel" variable. 
-                <li>Voltage Control</li>
-                Instead of using rpm control, I used voltage to ensure that the motors do not overheat
-                while ensuring the accuracy of power control of the motors. 
-            </ol>
-            <li>Position Tracking Algorithm</li>
-            By using two prependicularly placed unpowered tracking wheels on the robot, as well as an inertial sensor 
-            that acts as a gyro for heading detection, I am able to use calculus and trigonometry to determine the 
-            approximate position of the robot on the playing field. This allows coordinate-based coding of the robot, 
-            which I can then use coordinates of the objects on the playing field to code the robot. Even if the robot
-            is a couple of inches off its expected position due to environmental factors, it can still correct itself
-            during the autonomous run. <br>
-            I have taken some reference from this document: 
-            <a href="http://thepilons.ca/wp-content/uploads/2018/10/Tracking.pdf">5225A Odometry</a><br>
-            and alongside some of my math: <br>
-            <img src="../images/odom1.jpg" alt="odom-1" style="width: 25rem; height: auto;">
-            <img src="../images/odom2.jpg" alt="odom-2" style="width: 25rem; height: auto;">
-            <li>Pure Pursuit</li>
-            For this algorithm, I mainly  
-            <a href="https://www.chiefdelphi.com/uploads/default/original/3X/b/e/be0e06de00e07db66f97686505c3f4dde2e332dc.pdf">referenced</a>
-             it from team 1712 from FRC. It is an algorithm that allows the robot to follow a pre-generated curve on the playing field. 
-            It mainly plots some lookahead points on the path for the robot to follow, and the more points are plotted, the 
-            better the robot follows the path. Through some online searching and researching, I implemented a quadratic and cubic 
-            <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve">Bézier curve</a>
-            for the path generation. This allows me to dodge obstacles on the straight line between two points that I want to direct the robot to drive to.
-            The main method of achieving this is to carefully adjust the difference between left and right chassis drive power to achieve the 
-            curvature of the robot movement desired.  
-            Code for path following algorithm is as follows: <br>
-            <img src="../images/pure-pursuit-1.png" alt="pure-pursuit-1" style="width: 35rem; height: auto;">
-        </ul>
-    </div>
     
-
-</div>
+    </div>
+</body>
 {% endblock %}
