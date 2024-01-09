@@ -1,15 +1,17 @@
 html {
     height: 100%;
-    background-color: blueviolet !important;
+    margin: 0;
 }
 
 body {
     min-width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     margin: 0;
-    justify-content: center;
-    align-items: center;
-    background-color: lime;
+    padding: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
 }
 
 .dropdown {
@@ -30,7 +32,7 @@ body {
 
 #mainscreen {
     width: 100%;
-    height: 80vh;
+    height: 60vh;
     display: flex;
 }
 
@@ -53,6 +55,9 @@ body {
     padding-right: 10%;
 }
 
+#intro {
+    font-size: 130%; 
+}
 
 #aboutName {
     flex: 70%;
@@ -62,20 +67,18 @@ body {
 #tabicons {
     display: flex;
     flex: 50%;
-    align-items: center; 
-    justify-items: center; 
     margin-right: 5%;
     align-items: flex-end;
 }
 
-div#tabicons div {
+#tabicons div {
     margin-left: auto;
     float: right;
     display: flex;
 
 }
 
-a.linkicon img {
+.linkicon img {
     padding: 0.2rem;
     align-self: flex-end;
     display: flex;
@@ -90,3 +93,30 @@ a.linkicon img {
     flex-direction: column;
     
 }
+
+.background {
+    position: relative;
+    z-index: 1;
+    background: url('../images/mainbackground.jpeg');
+    background-size: cover;
+}
+
+.main-background {
+    width: 100%;
+    height: 100%;
+}
+
+.main-background::before {
+    z-index: -1;
+    content: "";
+    background: url('../images/mainbackground.jpeg');
+    background-size: cover;
+    
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+}
+

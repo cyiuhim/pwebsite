@@ -1,7 +1,8 @@
 from flask import Flask, render_template, send_from_directory
 import os
 
-app = Flask(__name__, template_folder='templates', static_folder='images')
+template_dir = os.path.abspath()
+app = Flask(__name__, template_folder='/', static_folder='images')
 
 @app.route('/')
 def home(): 
@@ -17,7 +18,7 @@ def projects():
 
 @app.route('/robotics')
 def robotics():
-    return render_template("robot.html")
+    return render_template("robotics.html")
 
 @app.route('/showerscribe')
 def showerscribe():

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vincent Chung</title>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            .background:before {
+                z-index: -1;
+                position: absolute;
+                content: "";
+                background: url('../images/mainbackground.jpeg');
+                background-size: cover;
+                opacity: 0.5;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        </style>
+        
+        <div style="display: flex; background-color: #ADD8E6; position: sticky">
+            <div style="flex: 50%;">
+                <nav class="navbar navbar-expand-lg navbar-light"> <!--configure colour of navbar here navbar-light-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tabsNav" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="tabsNav" style="width: 50%;">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Home </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Me </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/" id="projectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">Projects</a>
+                                <ul class="dropdown-menu border-0 shadow bsb-zoomIn" aria-labelledby="projectDropdown">
+                                    <li><a class="dropdown-item" href="robotics.html">Robotics</a></li>
+                                    <li><a class="dropdown-item" href="showerscribe">ShowerScribe</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div id="tabicons">
+                <div>
+                    <a href="https://github.com/pumpkin285" class="linkicon">
+                        <img src="../images/github-icon.png" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/yiu-him-chung/" class="linkicon">
+                        <img src="../images/linkedin-icon.png" />
+                    </a>
+                    <a href="mailto: cyiuhim@gmail.com" class="linkicon">
+                        <img src="../images/mail-icon.png" />
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        
+    </head>
+    
+    
+    <body>
+        <div class="main-background">
+            <div id="mainscreen">
+                <div style="width: 70%; float: left;">
+                    <div id="namebox">
+                        <h1 id="name" style="font-size: 250%;">Hello, I am Vincent Chung!</h1>
+                        
+                    </div>
+                    <div>
+                        <p id="shortintro">A software engineering student, currently seeking for summer 2024 internships. </p>
+                    </div>
+                    
+                </div>
+                <div style="width: 30%; float: right;">
+                    <img src="../images/myself.jpeg" style="float: left; padding-top: 10%; width: 70%; height: auto" />
+                </div>
+                
+            </div>
+            <div style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                <p id="intro">A C++, C, Python and SQL developer, with 3+ years of experience in C++, aspiring to become a backend or game developer.</p>
+            </div>
+        </div>
+        
+</body>
+
+</html>
+
