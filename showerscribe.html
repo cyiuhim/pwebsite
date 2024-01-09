@@ -1,2 +1,138 @@
-{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title >Vincent Chung</title>
+        
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            .background {
+                position: relative;
+                z-index: 1;
+                background: url('../images/mainbackground.jpeg');
+                background-size: cover;
+            }
+        </style>
+        <div style="display: flex; background-color: #ADD8E6;">
+            <div style="flex: 50%;">
+                <nav class="navbar navbar-expand-lg navbar-light"> <!--configure colour of navbar here navbar-light-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tabsNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="tabsNav" style="width: 50%;">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="/">Home </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html">About Me </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="/" id="projectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">Projects</a>
+                                <ul class="dropdown-menu border-0 shadow bsb-zoomIn" aria-labelledby="projectDropdown">
+                                    <li><a class="dropdown-item" href="robotics.html">Robotics</a></li>
+                                    <li><a class="dropdown-item" href="showerscribe.html">ShowerScribe</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div id="tabicons">
+                <div>
+                    <a href="https://github.com/pumpkin285" class="linkicon">
+                        <img src="../images/github-icon.png">
+                    </a>
+                    <a href="https://www.linkedin.com/in/yiu-him-chung/" class="linkicon">
+                        <img src="../images/linkedin-icon.png">
+                    </a>
+                    <a href="mailto: cyiuhim@gmail.com" class="linkicon">
+                        <img src="../images/mail-icon.png">
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        
+    </head>
+    <body>
+        <div class="background">
+            <div class="content">
+                <div style="align-self: center;">
+                    <div style="display: flex; width: 80%; margin: auto; padding: 3rem; flex-direction: column; background-color: white; ">
+                        <div style="flex-direction: row;">
+                            <h1>Vincent Chung </h1>
+                            <h5>ShowerScribe (SE101 Project)</h5>
+                            <ul>
+                                <li>Skills used: Python, Flask, HTML, CSS, APIs, test case analysis, teamwork</li>
+                                <li>Duration: 2 months</li>
+                            </ul>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; flex-direction: column; justify-content: center;">
+                            
+                            <div>
+                                <div>
+                                Link to presentation video of the project: 
+                                <a href="https://youtu.be/pPOIAyJtj88">ShowerScribe</a>
+                                </div>
+                                <p>
+                                This is a project that I collaborated with 5 other classmates to complete, which uses Raspberry Pi as main hardware components and Python as main programming language.
+                                </p>
+                                
+                                <ul>
+                                    Some features include:   
+                                    <li>Easy use: it can record your voice and shower thoughts upon a push of a button. </li>
+                                    <li>Voice transcription to transcribe the recordings, which is what I mainly worked on.</li>
+                                    <li>LLM services and semantic search to categorize the recordings </li>
+                                    <li>Waterproof, can be installed easily in the shower.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p>One of the main challenges that I faced during the project is to consider any post-audio modification after recording, since there could be some background noise of the shower that can cause the AI model to not be able to filter out the voice accurately. Another challenge is to figure out how to link everything together using a conductor, for auto startup.</p>
+                            </div>
+                            <div style="height: auto; width: 60%; padding-bottom: 1rem;">
+                                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                                  <ul class="carousel-indicators">
+                                    <li data-target="#demo" data-slide-to="0" class="active"></li>
+                                    <li data-target="#demo" data-slide-to="1"></li>
+                                 </ul>
+                                  <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                      <img src="../images/shower-scribe-1.jpg" class="d-block w-100" alt="...">
+                                      
+                                    </div>
+                                    <div class="carousel-item">
+                                      <img src="../images/shower-scribe-2.png" class="d-block w-100" alt="...">
+                                    </div>
+                                  </div>
+                                   <a class="carousel-control-prev" href="#demo" data-slide="prev">
+
+                                        <span class="carousel-control-prev-icon"></span>
+                                    
+                                     </a>
+                                    
+                                     <a class="carousel-control-next" href="#demo" data-slide="next">
+                                    
+                                        <span class="carousel-control-next-icon"></span>
+                                    
+                                     </a>
+                            </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </body>
+</html>
+
+
 

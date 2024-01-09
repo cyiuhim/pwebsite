@@ -1,29 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Vincent Chung</title>
+        <title >Vincent Chung</title>
         
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="styles.css">
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
         <style>
-            .background:before {
-                z-index: -1;
-                position: absolute;
-                content: "";
+            .background {
+                position: relative;
+                z-index: 1;
                 background: url('../images/mainbackground.jpeg');
                 background-size: cover;
-                opacity: 0.5;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
             }
         </style>
-        
-        <div style="display: flex; background-color: #ADD8E6; position: sticky">
+        <div style="display: flex; background-color: #ADD8E6;">
             <div style="flex: 50%;">
                 <nav class="navbar navbar-expand-lg navbar-light"> <!--configure colour of navbar here navbar-light-->
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tabsNav" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#tabsNav">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="tabsNav" style="width: 50%;">
@@ -38,7 +36,7 @@
                                 <a class="nav-link dropdown-toggle" href="/" id="projectDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">Projects</a>
                                 <ul class="dropdown-menu border-0 shadow bsb-zoomIn" aria-labelledby="projectDropdown">
                                     <li><a class="dropdown-item" href="robotics.html">Robotics</a></li>
-                                    <li><a class="dropdown-item" href="showerscribe">ShowerScribe</a></li>
+                                    <li><a class="dropdown-item" href="showerscribe.html">ShowerScribe</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -48,13 +46,13 @@
             <div id="tabicons">
                 <div>
                     <a href="https://github.com/pumpkin285" class="linkicon">
-                        <img src="../images/github-icon.png" />
+                        <img src="../images/github-icon.png">
                     </a>
                     <a href="https://www.linkedin.com/in/yiu-him-chung/" class="linkicon">
-                        <img src="../images/linkedin-icon.png" />
+                        <img src="../images/linkedin-icon.png">
                     </a>
                     <a href="mailto: cyiuhim@gmail.com" class="linkicon">
-                        <img src="../images/mail-icon.png" />
+                        <img src="../images/mail-icon.png">
                     </a>
                 </div>
                 
@@ -62,32 +60,95 @@
         </div>
         
     </head>
-    
-    
     <body>
-        <div class="main-background">
-            <div id="mainscreen">
-                <div style="width: 70%; float: left;">
-                    <div id="namebox">
-                        <h1 id="name" style="font-size: 250%;">Hello, I am Vincent Chung!</h1>
+        <div class="background">
+            <div class="content">
+                <div style="align-self: center;">
+                    <div style="display: flex; width: 80%; margin: auto; padding: 3rem; flex-direction: column; background-color: white; ">
+                        <div style="flex-direction: row;">
+                            <h1>Vincent Chung </h1>
+                            <h5>My VEX Robotics Experience</h5>
+                            <ul>
+                                <li>Skills used: C++, teamwork, time, project management</li>
+                                <li>Duration: 4 years</li>
+                            </ul>
+                        </div>
                         
+                        <div>
+                            <div>
+                                Link to Github Repository of my code:
+                                <a href="https://github.com/pumpkin285/Robotics-Code">Robotics</a>
+                            </div>
+                            <div>
+                                <p>
+                                Being in VEX Robotics for the entirety of my time in high school, I have developed a variety of skills 
+                                regarding teamwork and programming, as well as achieved a high level of competitiveness.
+                                </p>
+                                
+                                <ul>
+                                    Some achievements include:   
+                                    <li>World Qualifications in my junior and senior years (Tipping point and Spin Up)</li>
+                                    <li>Provincial Finalist in my senior year</li>
+                                    <li>Multiple awards including the Amaze and Judges Awards </li>
+                                    <li>Peaked at Top 50 in the world for skills</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <p>Throughout the development of my code, I have mainly improved on the autonomous code of the robot. </p>
+                                <ul>
+                                    Some algorithms and techniques that I have used include: 
+                                    <li>PID (Proportional-Integral-Derivative) Controller</li>
+                                    It is an error feedback mechanism, that takes in the errors between predicted movement and actual movement
+                                    and adjust the motor powers based on calculations and PID constant tuning. 
+                                    This allowed accurate movements of the robot in each autonomous run. 
+                                    Through this implementation, I have learnt rigorous testing of the robot and its movements. 
+                                    This allows me to develop a skill to pay attention to the details of my code to ensure that the robot moves 
+                                    accordingly and accurately every autonomous run. <br>
+                                    In addition to the readily available code on the internet, I have several additions to the code: <br>
+                                    <img src="../images/pid.png" alt="pid code" style="max-width: 35rem;height: auto;"><br>
+                                    This code is taken from my turn PID function, with the forward/backward PID function working similarly.
+                                    <ol>
+                                        Some additions included:
+                                        <li>Gradual acceleration</li>
+                                        This ensures that the robot does not drift or tip when I start the PID movement. 
+                                        This is regulated using the "maxaccel" variable. 
+                                        <li>Voltage Control</li>
+                                        Instead of using rpm control, I used voltage to ensure that the motors do not overheat
+                                        while ensuring the accuracy of power control of the motors. 
+                                    </ol>
+                                    <li>Position Tracking Algorithm</li>
+                                    By using two prependicularly placed unpowered tracking wheels on the robot, as well as an inertial sensor 
+                                    that acts as a gyro for heading detection, I am able to use calculus and trigonometry to determine the 
+                                    approximate position of the robot on the playing field. This allows coordinate-based coding of the robot, 
+                                    which I can then use coordinates of the objects on the playing field to code the robot. Even if the robot
+                                    is a couple of inches off its expected position due to environmental factors, it can still correct itself
+                                    during the autonomous run. <br>
+                                    I have taken some reference from this document: 
+                                    <a href="http://thepilons.ca/wp-content/uploads/2018/10/Tracking.pdf">5225A Odometry</a><br>
+                                    and alongside some of my math: <br>
+                                    <img src="../images/odom1.jpg" alt="odom-1" style="max-width: 25rem; height: auto;">
+                                    <img src="../images/odom2.jpg" alt="odom-2" style="max-width: 25rem; height: auto;">
+                                    <li>Pure Pursuit</li>
+                                    For this algorithm, I mainly  
+                                    <a href="https://www.chiefdelphi.com/uploads/default/original/3X/b/e/be0e06de00e07db66f97686505c3f4dde2e332dc.pdf">referenced</a>
+                                    it from team 1712 from FRC. It is an algorithm that allows the robot to follow a pre-generated curve on the playing field. 
+                                    It mainly plots some lookahead points on the path for the robot to follow, and the more points are plotted, the 
+                                    better the robot follows the path. Through some online searching and researching, I implemented a quadratic and cubic 
+                                    <a href="https://en.wikipedia.org/wiki/B%C3%A9zier_curve">Bézier curve</a>
+                                    for the path generation. This allows me to dodge obstacles on the straight line between two points that I want to direct the robot to drive to.
+                                    The main method of achieving this is to carefully adjust the difference between left and right chassis drive power to achieve the 
+                                    curvature of the robot movement desired.  
+                                    Code for path following algorithm is as follows: <br>
+                                    <img src="../images/pure-pursuit-1.png" alt="pure-pursuit-1" style="width: 35rem; height: auto;">
+                                </ul>
+                            </div>
+                            
+                        
+                        </div>
                     </div>
-                    <div>
-                        <p id="shortintro">A software engineering student, currently seeking for summer 2024 internships. </p>
-                    </div>
-                    
                 </div>
-                <div style="width: 30%; float: right;">
-                    <img src="../images/myself.jpeg" style="float: left; padding-top: 10%; width: 70%; height: auto" />
-                </div>
-                
             </div>
-            <div style="width: 100%; display: flex; align-items: center; justify-content: center;">
-                <p id="intro">A C++, C, Python and SQL developer, with 3+ years of experience in C++, aspiring to become a backend or game developer.</p>
-            </div>
-        </div>
-        
-</body>
-
+        </div>    
+    </body>
 </html>
 
