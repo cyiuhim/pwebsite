@@ -105,7 +105,7 @@ body {
 .main-background::before {
     z-index: -1;
     content: "";
-    background: url('../../images/mainbackground.jpeg');
+    background: url('../images/mainbackground.jpeg');
     background-size: cover;
     
     position: absolute;
