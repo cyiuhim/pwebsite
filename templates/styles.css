@@ -61,7 +61,10 @@ body {
 
 #aboutName {
     flex: 70%;
-    flex-direction: row;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #tabicons {
@@ -94,13 +97,6 @@ body {
     
 }
 
-.background {
-    position: relative;
-    z-index: 1;
-    background: url('../images/mainbackground.jpeg');
-    background-size: cover;
-}
-
 .main-background {
     width: 100%;
     height: 100%;
@@ -109,7 +105,7 @@ body {
 .main-background::before {
     z-index: -1;
     content: "";
-    background: url('../images/mainbackground.jpeg');
+    background: url('../../images/mainbackground.jpeg');
     background-size: cover;
     
     position: absolute;
