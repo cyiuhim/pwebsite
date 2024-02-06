@@ -1,7 +1,7 @@
 ---
 deployment: 
   tasks:
-    - export DEPLOYPATH=/home/cyiuhimc/public_html/
-    - /bin/cp -r images $DEPLOYPATH
+    - export DEPLOYPATH=/home/cyiuhimc/public_html/templates
+    - /bin/cp -r ../images $DEPLOYPATH
     - /bin/cp -r templates $DEPLOYPATH
-    - /bin/cp -r attachments $DEPLOYPATH
+    - /bin/cp -r ../attachments $DEPLOYPATH
